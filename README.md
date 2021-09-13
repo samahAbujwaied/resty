@@ -1,4 +1,7 @@
 # resty
 
 # UML  
-![](./lab16/img/uml.png)
+![](./img/uml.png)
+
+# Test 
+![](./img/test.png)
