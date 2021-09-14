@@ -37,4 +37,18 @@ it('Should render results', () => {
   expect(items).toHaveTextContent('fake thing 1');
   expect(items).toHaveTextContent('http://fakethings.com/2');
   expect(items).toHaveTextContent('Headers');
-});
+})
+it('Should render results', () => {
+  const result = {
+  
+  };
+
+  render(<Results data={result} />);
+
+  const items = screen.getByTestId('renderedData');
+  expect(items).toHaveTextContent('{}');
+  
+})
+
+
+;
