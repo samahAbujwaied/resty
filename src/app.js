@@ -35,12 +35,12 @@ function App(props){
 });
 // This will run only when the name changes
 useEffect(()=> {
-    console.log(`%c I RUN ON PEOPLE CHANGE: ${history}` , 'background:#000; color:purple');
+    console.log(`%c I RUN ON HISTORY CHANGE: ${history}` , 'background:#000; color:purple');
 }, [history]);
 
 // when name or people are changed 
 useEffect(()=> {
-    console.log("I RUN ON NAME, PEOPLE CHANGE: ", state);
+    console.log("I RUN ON STATE, HISTORY CHANGE: ", state);
 }, [state, history]);
 
 // run once on initial rendering 
