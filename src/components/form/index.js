@@ -12,6 +12,7 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     const formData = {
       method: method,
       url: url
@@ -28,6 +29,7 @@ function Form(props) {
     setmethod(e.target.id);
   }
   function handleUrl(e) {
+   
     seturl(e.target.value);
   }
 
@@ -40,7 +42,7 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input name='url' type='text' onChange={handleUrl}/>
+          <input required name='url' type='text' onChange={handleUrl}/>
           <button type="submit" data-testid="submit">GO!</button>
         </label>
         <label className="methods">
