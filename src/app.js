@@ -6,7 +6,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
-import History from './components/history';
+
 function App(props){
 
   const [state, setState] = useState({data: '', requestParams:{}});
@@ -49,17 +49,8 @@ useEffect(()=> {
   return (
     <React.Fragment>
       <Header />
- 
-         <History history={history}/>  
-         {/* {
-                history.map((item, idx)=> {
-                   return <div key={idx}>{item}</div>
-                })
-                
-            } */}
-      <Form handleApiCall={callApi} />
-      {/* { <div>Request Method: {state.requestParams.method}</div> }
-      {<div>URL: {state.requestParams.url}</div>} */}
+       
+      <Form history={history} handleApiCall={callApi} />
       <Results data={state.data} />
       
       <Footer />
@@ -67,40 +58,5 @@ useEffect(()=> {
   );
 }
 
-// class App extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       data: null,
-//       requestParams: {},
-//     };
-//   }
-
-//   callApi = (requestParams) => {
-//     // mock output
-//     const data = {
-//       count: 2,
-//       results: [
-//         {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-//         {name: 'fake thing 2', url: 'http://fakethings.com/2'},
-//       ],
-//     };
-//     this.setState({data, requestParams});
-//   }
-
-//   render() {
-//     return (
-//       <React.Fragment>
-//         <Header />
-//         <div>Request Method: {this.state.requestParams.method}</div>
-//         <div>URL: {this.state.requestParams.url}</div>
-//         <Form handleApiCall={this.callApi} />
-//         <Results data={this.state.data} />
-//         <Footer />
-//       </React.Fragment>
-//     );
-//   }
-// }
 
 export default App;
